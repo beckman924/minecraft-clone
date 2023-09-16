@@ -7,10 +7,10 @@ const ACTIONS_KEYBOARD_MAP = {
   KeyD: "moveRight",
   Space: "jump",
   Digit1: "dirt",
-  Digit2: "grass",
-  Digit3: "glass",
-  Digit4: "wood",
-  Digit5: "log",
+  Digit2: "glass",
+  Digit3: "grass",
+  Digit4: "log",
+  Digit5: "wood",
 };
 
 export const useKeyboard = () => {
@@ -33,7 +33,6 @@ export const useKeyboard = () => {
       const action = ACTIONS_KEYBOARD_MAP[code];
 
       if (action) {
-        // if (actions[action]) return;
         setActions((prevActions) => ({ ...prevActions, [action]: true }));
       }
     };
@@ -43,7 +42,6 @@ export const useKeyboard = () => {
       const action = ACTIONS_KEYBOARD_MAP[code];
 
       if (action) {
-        // if (!actions[action]) return;
         setActions((prevActions) => ({ ...prevActions, [action]: false }));
       }
     };
